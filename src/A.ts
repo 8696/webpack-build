@@ -1,5 +1,4 @@
-// @ts-ignore
-import B from './B.ts';
+import B from './B';
 
 class A extends B {
   constructor() {
@@ -7,7 +6,9 @@ class A extends B {
   }
 
   testA() {
-    console.log('test A');
+    [1, 2].forEach(item => {
+      console.log(this);
+    });
   }
 }
 
