@@ -1,6 +1,7 @@
 import B from './B';
 
 class A extends B {
+  static v: string;
   constructor() {
     super();
   }

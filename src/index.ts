@@ -1,3 +1,7 @@
 import A from './A';
 
-export default A;
+const p = require('../package.json');
+
+A.v = p.version;
+
+module.exports = A;

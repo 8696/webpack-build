@@ -1,3 +1,4 @@
 const Dist = require('./dist.node.min');
 
-console.log(new Dist().testA());
+new Dist().testB()
+console.log(Dist.v)
