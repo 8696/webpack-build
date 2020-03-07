@@ -3,7 +3,7 @@
   "version": "0.0.1-alpha.1",
   "description": "This is an alpha version",
   "author": "long<204084802@qq.com>",
-  "main": "./dist/dist.min.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack -w --config build.config.js",
