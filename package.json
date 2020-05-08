@@ -6,8 +6,8 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack -w --config build.config.js",
-    "build": "webpack -p --config build.config.js"
+    "dev": "webpack --env.NODE_ENV=development -w --config build.config.js",
+    "build": "webpack --env.NODE_ENV=production --config build.config.js"
   },
   "repository": {
     "type": "git",
