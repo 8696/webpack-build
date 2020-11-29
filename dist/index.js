@@ -1,4 +1,9 @@
-const Dist = require('./dist.node.dev');
+// const Main = require('./node.dev');
+const Main = require('./node.min');
 
-new Dist().testB()
-console.log(Dist.v)
+
+const main = new Main('long');
+main.echoName();
+main.testSleep();
+
+

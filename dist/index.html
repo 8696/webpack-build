@@ -5,11 +5,29 @@
   <title>Title</title>
 </head>
 <body>
-<script src="dist.dev.js"></script>
+<!--
+<script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js"></script>
 <script>
-  new Dist().testB();
-  console.log(Dist.v);
+  require.config({
+    paths: {
+      Dist: './browser.dev',
+    }
+  });
+
+  require(['Dist'], function (Dist) {
+    var main = new Dist('long');
+    // main.echoName();
+    main.testSleep();
+  });
+</script>-->
+<!--<script src="browser.dev.js"></script>-->
+<script src="browser.min.js"></script>
+<script>
+  var main = new Dist('long')
+  // main.echoName();
+  main.testSleep();
 </script>
+
 </body>
 </html>
 

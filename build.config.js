@@ -1,8 +1,9 @@
 module.exports = env => {
-
+  const merge = require('webpack-merge');
+  const isDev = env.NODE_ENV === 'development';
   const config = {
     mode: env.NODE_ENV,
-    devtool: 'source-map',
+    devtool: isDev ? 'source-map' : 'none',
     entry: {
       index: './index.ts',
     },
@@ -33,15 +34,15 @@ module.exports = env => {
     },
   };
   return [
-    require('webpack-merge')(config, {
+    merge(config, {
       output: {
-        filename: config.mode === 'development' ? 'dist.node.dev.js' : 'dist.node.min.js',
+        filename: isDev ? 'node.dev.js' : 'node.min.js',
         libraryTarget: 'commonjs2',
       }
     }),
-    require('webpack-merge')(config, {
+    merge(config, {
       output: {
-        filename: config.mode === 'development' ? 'dist.dev.js' : 'dist.min.js',
+        filename: isDev ? 'browser.dev.js' : 'browser.min.js',
         libraryTarget: 'umd',
         umdNamedDefine: true
       }
