@@ -2,6 +2,8 @@ import Person from './person.class'
 import {includes} from './utils'
 
 export default class Main extends Person {
+  public static version
+
   constructor(username) {
     super(username);
   }

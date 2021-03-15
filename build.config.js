@@ -12,7 +12,7 @@ module.exports = env => {
       library: 'Dist',
     },
     resolve: {
-      extensions: ['.js', '.ts'],
+      extensions: ['.js', '.ts', '.json'],
     },
     module: {
       rules: [
@@ -34,19 +34,21 @@ module.exports = env => {
     },
   };
   return [
+    // NodeJS 配置
     merge(config, {
       output: {
         filename: isDev ? 'node.dev.js' : 'node.min.js',
         libraryTarget: 'commonjs2',
       }
     }),
+    // 浏览器端配置
     merge(config, {
       output: {
         filename: isDev ? 'browser.dev.js' : 'browser.min.js',
         libraryTarget: 'umd',
         umdNamedDefine: true
       }
-    }),
+    })
   ];
 };
 

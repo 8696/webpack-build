@@ -111,6 +111,7 @@ var __importDefault = undefined && undefined.__importDefault || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var main_1 = __importDefault(__webpack_require__(/*! ./src/main */ "./src/main.ts"));
+main_1.default.version = __webpack_require__(/*! ./package.json */ "./package.json").version;
 module.exports = main_1.default;
 
 /***/ }),
@@ -3922,6 +3923,17 @@ if (hadRuntime) {
   (function() { return this })() || Function("return this")()
 );
 
+
+/***/ }),
+
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: name, version, description, author, main, scripts, repository, license, devDependencies, dependencies, keywords, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"name\":\"build-dist\",\"version\":\"0.0.1-alpha.1\",\"description\":\"This is an alpha version\",\"author\":\"long<204084802@qq.com>\",\"main\":\"\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\",\"dev\":\"webpack --env.NODE_ENV=development -w --config build.config.js\",\"build\":\"webpack --env.NODE_ENV=production --config build.config.js\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/8696/build-dist\"},\"license\":\"ISC\",\"devDependencies\":{\"@types/node\":\"^13.7.4\",\"babel-core\":\"^6.26.3\",\"babel-loader\":\"^7.1.4\",\"babel-plugin-transform-runtime\":\"^6.23.0\",\"babel-polyfill\":\"^6.26.0\",\"babel-preset-env\":\"^1.7.0\",\"merge\":\"^1.2.1\",\"ts-loader\":\"^6.2.1\",\"typescript\":\"^3.7.4\",\"webpack\":\"^4.19.0\",\"webpack-cli\":\"^3.1.2\",\"webpack-merge\":\"^4.2.2\"},\"dependencies\":{},\"keywords\":[]}");
 
 /***/ }),
 
